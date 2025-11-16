@@ -13,7 +13,7 @@ const AllEmployees = () => {
     const fetchEmployees = async () => {
       try {
         console.log("Fetching employees...");
-        const res = await axios.get("http://localhost:5000/api/employees");
+        const res = await axios.get("https://sterling-project.onrender.com/api/employees");
         console.log("Fetched employees:", res.data);
         setEmployees(res.data.employees); // ✅ fix: only set employees array
       } catch (err) {

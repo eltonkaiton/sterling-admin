@@ -23,7 +23,7 @@ const AddEmployee = () => {
 
     try {
       const res = await axios.post(
-        'http://localhost:5000/api/employees/add',
+        'https://sterling-project.onrender.com/api/employees/add',
         form,
         { headers: { 'Content-Type': 'application/json' } }
       );

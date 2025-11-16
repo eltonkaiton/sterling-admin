@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const BACKEND_URL = "http://localhost:5000/api/auth"; // change if hosted
+const BACKEND_URL = "https://sterling-project.onrender.com/api/auth"; // change if hosted
 
 // Simple web footer component
 const Footer = () => {

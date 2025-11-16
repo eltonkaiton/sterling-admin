@@ -60,7 +60,7 @@ const AdminDashboard = () => {
 
       const token = localStorage.getItem("token");
       const res = await axios.get(
-        `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/admin/summary`,
+        `${import.meta.env.VITE_API_URL || "https://sterling-project.onrender.com"}/api/admin/summary`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 

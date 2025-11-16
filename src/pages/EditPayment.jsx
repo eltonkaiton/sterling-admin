@@ -19,7 +19,7 @@ const EditPayment = () => {
 
   // Fetch existing payment details
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/payments/${id}`)
+    axios.get(`https://sterling-project.onrender.com/api/payments/${id}`)
       .then(res => {
         if (res.data && res.data.payment) {
           const { payer, amount, date, method, status } = res.data.payment;
@@ -47,7 +47,7 @@ const EditPayment = () => {
     setMessage('');
 
     try {
-      const res = await axios.put(`http://localhost:5000/api/payments/${id}`, form);
+      const res = await axios.put(`https://sterling-project.onrender.com/api/payments/${id}`, form);
 
       if (res.status === 200) {
         setMessage('Payment updated successfully');

@@ -34,7 +34,7 @@ const AddClaim = () => {
       }
 
       await axios.post(
-        'http://localhost:5000/api/claims',
+        'https://sterling-project.onrender.com/api/claims',
         { ...form, userId }, // ✅ backend generates reference
         {
           headers: {

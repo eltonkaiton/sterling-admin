@@ -21,7 +21,7 @@ const EditClaim = () => {
   useEffect(() => {
     const fetchClaim = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/claims/${id}`);
+        const res = await axios.get(`https://sterling-project.onrender.com/api/claims/${id}`);
         if (res.data && res.data._id) {
           setForm({
             reference: res.data.reference || '',
@@ -51,7 +51,7 @@ const EditClaim = () => {
 
     try {
       const res = await axios.patch(
-        `http://localhost:5000/api/claims/${id}`,
+        `https://sterling-project.onrender.com/api/claims/${id}`,
         form,
         { headers: { 'Content-Type': 'application/json' } }
       );

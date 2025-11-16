@@ -26,7 +26,7 @@ const AddPayment = () => {
     setLoading(true);
 
     try {
-      await axios.post('http://localhost:5000/api/payments', form, {
+      await axios.post('https://sterling-project.onrender.com/api/payments', form, {
         headers: { 'Content-Type': 'application/json' },
       });
 

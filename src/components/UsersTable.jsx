@@ -10,7 +10,7 @@ const UsersTable = ({ status = 'pending' }) => {
   const [error, setError] = useState('');
 
   const LIMIT = 5;
-  const BACKEND_URL = 'http://localhost:5000/api/users'; // replace with local IP if needed
+  const BACKEND_URL = 'https://sterling-project.onrender.com/api/users'; // replace with local IP if needed
 
   // Fetch users with filters, pagination, search
   const fetchUsers = async () => {

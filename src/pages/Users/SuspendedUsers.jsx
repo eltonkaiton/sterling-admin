@@ -13,7 +13,7 @@ const SuspendedUsers = () => {
     setError('');
     try {
       const res = await fetch(
-        `http://localhost:5000/api/users?status=suspended&search=${search}&page=${page}&limit=5`
+        `https://sterling-project.onrender.com/api/users?status=suspended&search=${search}&page=${page}&limit=5`
       );
       if (!res.ok) throw new Error(`Server returned ${res.status}`);
       const data = await res.json();
@@ -33,7 +33,7 @@ const SuspendedUsers = () => {
   const updateStatus = async (id, newStatus) => {
     if (window.confirm(`Change status to "${newStatus}"?`)) {
       try {
-        await fetch(`http://localhost:5000/api/users/${id}/status`, {
+        await fetch(`https://sterling-project.onrender.com/api/users/${id}/status`, {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ status: newStatus }),
@@ -48,7 +48,7 @@ const SuspendedUsers = () => {
   const deleteUser = async (id) => {
     if (window.confirm('Are you sure you want to delete this user?')) {
       try {
-        await fetch(`http://localhost:5000/api/users/${id}`, { method: 'DELETE' });
+        await fetch(`https://sterling-project.onrender.com/api/users/${id}`, { method: 'DELETE' });
         fetchUsers();
       } catch {
         alert('Error deleting user');

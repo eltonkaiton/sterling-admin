@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:5000/api"; // change for production
+const API_BASE_URL = "https://sterling-project.onrender.com/api"; // change for production
 
 const api = axios.create({
   baseURL: API_BASE_URL,

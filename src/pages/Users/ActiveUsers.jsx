@@ -15,7 +15,7 @@ const ActiveUsers = () => {
   const [editRole, setEditRole] = useState('');
 
   const LIMIT = 5;
-  const BACKEND_URL = 'http://localhost:5000/api/users'; // ✅ Updated
+  const BACKEND_URL = 'https://sterling-project.onrender.com/api/users'; // ✅ Updated
 
   // Fetch active users
   const fetchUsers = async () => {

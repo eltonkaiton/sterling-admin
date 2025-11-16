@@ -10,7 +10,7 @@ const PendingUsers = () => {
 
   const LIMIT = 5;
   // ✅ Same as ActiveUsers
-  const BACKEND_URL = 'http://localhost:5000/api/admin/users';
+  const BACKEND_URL = 'https://sterling-project.onrender.com/api/admin/users';
 
   // Fetch pending users
   const fetchUsers = async () => {
